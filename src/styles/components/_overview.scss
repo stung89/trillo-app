@@ -10,6 +10,16 @@
         letter-spacing: 1px;
         margin: 0;
         padding: 1.5rem 3rem;
+
+        @media only screen and (max-width: $bp-small) {
+            font-size: 1.8rem;
+            padding: 1.25rem 2rem;
+        }
+
+        @media only screen and (max-width: $bp-xxsmall) {
+            font-size: 1.2rem;
+            padding: 1rem 1.5rem;
+        }
     }
 
     &__stars {
@@ -34,16 +44,30 @@
         align-items: center;
         justify-content: center;
         flex-direction: column;
+
+        @media only screen and (max-width: $bp-small) {
+            padding: 0 1.5rem;
+        }
+
+        @media only screen and (max-width: $bp-xxsmall) {
+            margin-left: 1rem;   
+        }
     }
 
     &__rating-average {
         font-size: 2.25rem;
         font-weight: 300;
         margin-top: -3px;
+
+        @media only screen and (max-width: $bp-small) {
+            font-size: 1.8rem;
+        }
     }
 
     &__rating-count {
-        
+        @media only screen and (max-width: $bp-small) {
+            font-size: .8rem;
+        }
     }
 }
 
@@ -95,6 +119,14 @@
     background-color: var(--color-grey-light-1);
     border-bottom: var(--line);
     font-size: 1.4rem;
+
+    @media only screen and (max-width: $bp-medium) {
+        padding: 3rem;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+        flex-direction: column;
+    }
 }
 
 .description {
@@ -103,6 +135,16 @@
     flex: 0 0 60%;
     margin-right: 4.5rem;
     padding: 3rem;
+
+    @media only screen and (max-width: $bp-medium) {
+        padding: 2rem;
+        margin-right: 3rem;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+        margin-right: 0;
+        margin-bottom: 3rem;
+    }
 }
 
 .user-reviews {
@@ -117,6 +159,10 @@
 
 .paragraph:not(:last-of-type) {
     margin-bottom: 2rem;
+
+    @media only screen and (max-width: $bp-medium) {
+        margin-bottom: 1rem;
+    }
 }
 
 //-----------list---------------
@@ -130,6 +176,11 @@
 
     display: flex;
     flex-wrap: wrap;
+
+    @media only screen and (max-width: $bp-medium) {
+        margin: 2rem 0;
+        padding: 2rem 0;
+    }
 
     &__item {
         flex: 0 0 50%;
@@ -157,6 +208,10 @@
     align-items: center;
     justify-content: space-between;
 
+    &__friends {
+        display: flex;
+    }
+
     &__photo {
         box-sizing: content-box;
         width: 4rem;
@@ -173,12 +228,17 @@
 //-------------Review---------------
 .review {
     background-color: #fff;
-    box-shadow: 0 2rem 5rem rgba(0,0,0,0.06);
+    box-shadow: 0 2rem 5rem rgba(65, 26, 26, 0.06);
     padding: 3rem;
     margin: 0;
     margin-bottom: 3.5rem;
     position: relative;
     overflow: hidden;
+
+    @media only screen and (max-width: $bp-medium) {
+        padding: 2rem;
+        margin-bottom: 3rem;
+    }
 
     &__text {
         margin-bottom: 2rem;
@@ -238,6 +298,10 @@
 .cta {
     padding: 3.5rem 0;
     text-align: center;
+
+    @media only screen and (max-width: $bp-medium) {
+        padding: 2.5rem 4rem;
+    }
 
     &__book-now {
         font-size: 2rem;
